@@ -68,7 +68,7 @@ const Partners = () => {
             Interested in partnering with GlycoCare?
           </p>
           <a
-            href="mailto:contact@glycocare.tn"
+            href="mailto:mohamed.laabidi@supcom.tn"
             className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white rounded-full font-semibold transition-all duration-200"
           >
             Become a Partner
