@@ -96,7 +96,6 @@ const PartnerLogo = ({ partner }) => {
       return (
         <div className="text-center">
           <span className="text-2xl font-bold text-[#1E40AF]">délice</span>
-          <div className="text-xs text-gray-500">Holding</div>
         </div>
       );
     case 'kilani':
