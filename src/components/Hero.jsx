@@ -145,8 +145,8 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-12 grid grid-cols-3 gap-8">
               {[
-                { number: '500+', label: 'Expected Runners' },
-                { number: '100+', label: 'Glucometers Goal' },
+                { number: '100+', label: 'Expected Runners' },
+                { number: '20+', label: 'Glucometers Goal' },
                 { number: '5', label: 'Partner Organizations' },
               ].map((stat, index) => (
                 <motion.div
