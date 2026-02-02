@@ -9,8 +9,8 @@ const MapSection = () => {
   const routeInfo = [
     { icon: Route, label: 'Distance', value: '5 km' },
     { icon: Clock, label: 'Est. Time', value: '30-45 min' },
-    { icon: MapPin, label: 'Start Point', value: "Sup'Com Campus" },
-    { icon: Navigation, label: 'Terrain', value: 'Flat, Urban' },
+    { icon: MapPin, label: 'Start Point', value: "Sup'Com" },
+    { icon: Navigation, label: 'Terrain', value: 'Elgazala Technopark' },
   ];
 
   return (
