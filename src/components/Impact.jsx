@@ -40,7 +40,7 @@ const Impact = () => {
   const impactStats = [
     {
       icon: Users,
-      value: 500,
+      value: 100,
       suffix: '+',
       label: 'Expected Participants',
       description: 'Runners joining our cause',
@@ -48,7 +48,7 @@ const Impact = () => {
     },
     {
       icon: Droplet,
-      value: 100,
+      value: 20,
       suffix: '+',
       label: 'Glucometers to Donate',
       description: 'Medical devices for those in need',
@@ -56,7 +56,7 @@ const Impact = () => {
     },
     {
       icon: Heart,
-      value: 1000,
+      value: 500,
       suffix: '+',
       label: 'Lives to Impact',
       description: 'People reached through awareness',
