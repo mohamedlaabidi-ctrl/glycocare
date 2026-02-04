@@ -91,14 +91,14 @@ const Partners = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 cursor-pointer group"
+              className="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
-              {/* Logo */}
+              {/* Logo - Always in color */}
               <div className="w-full h-24 flex items-center justify-center mb-4">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
               
