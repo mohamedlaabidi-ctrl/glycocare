@@ -1,18 +1,63 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { PersonStanding } from 'lucide-react';
+import { Handshake } from 'lucide-react';
+
+// Import partner logos
+import logo1 from '../assets/partners/logo1.png';
+import logo2 from '../assets/partners/logo2.png';
+import logo3 from '../assets/partners/logo3.png';
+import logo4 from '../assets/partners/logo4.png';
+import logo5 from '../assets/partners/logo5.png';
+import logo6 from '../assets/partners/logo6.png';
+import logo7 from '../assets/partners/logo7.png';
 
 const Partners = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const partners = [
-    { name: 'ATSN', logo: 'atsn' },
-    { name: 'Délice Holding', logo: 'delice' },
-    { name: 'Kilani Groupe', logo: 'kilani' },
-    { name: 'STB Bank', logo: 'stb' },
-    { name: 'Run-in Community', logo: 'runin' },
-    { name: 'INNTA', logo: 'innta' },
+    {
+      name: 'Institut National de Nutrition et de Technologies Alimentaires',
+      shortName: 'INNTA',
+      logo: logo1,
+      description: 'National Institute of Nutrition and Food Technologies',
+    },
+    {
+      name: 'Association Tunisienne des Sciences de la Nutrition',
+      shortName: 'ATSN',
+      logo: logo2,
+      description: 'Tunisian Association of Nutrition Sciences',
+    },
+    {
+      name: 'Prochidia',
+      shortName: 'Prochidia',
+      logo: logo3,
+      description: 'Healthcare Partner',
+    },
+    {
+      name: 'Run in Community',
+      shortName: 'Run in Community',
+      logo: logo4,
+      description: 'Running Community Partner',
+    },
+    {
+      name: 'Délice',
+      shortName: 'Délice',
+      logo: logo5,
+      description: 'Food & Beverage Partner',
+    },
+    {
+      name: 'Premium Fitness',
+      shortName: 'Premium Fitness',
+      logo: logo6,
+      description: 'Fitness Partner',
+    },
+    {
+      name: 'Kaiser',
+      shortName: 'Kaiser',
+      logo: logo7,
+      description: 'Sports Equipment Partner',
+    },
   ];
 
   return (
@@ -29,110 +74,63 @@ const Partners = () => {
             Our Partners
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Supported by <span className="text-[#EF4444]">Leaders</span>
+            Trusted <span className="text-[#EF4444]">Partners</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're proud to partner with organizations that share our vision 
-            for a healthier Tunisia. Together, we're making a difference.
+            We're proud to collaborate with these amazing organizations who share our vision 
+            for a healthier Tunisia.
           </p>
         </motion.div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 cursor-pointer group"
             >
-              <div className="bg-[#F3F4F6] rounded-2xl p-6 h-32 flex items-center justify-center transition-all duration-300 group-hover:bg-[#1E40AF]/5 group-hover:shadow-lg">
-                <PartnerLogo partner={partner} />
+              {/* Logo */}
+              <div className="w-full h-24 flex items-center justify-center mb-4">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
               </div>
-              <div className="mt-3 text-center">
-                <div className="font-semibold text-gray-900 text-sm">{partner.name}</div>
-              </div>
+              
+              {/* Partner Name */}
+              <h3 className="text-sm font-bold text-gray-900 text-center mb-1">
+                {partner.shortName}
+              </h3>
+              <p className="text-xs text-gray-500 text-center">
+                {partner.description}
+              </p>
             </motion.div>
           ))}
         </div>
 
-        {/* Partner CTA */}
+        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-center"
         >
-          <p className="text-gray-600 mb-4">
-            Interested in partnering with GlycoCare?
-          </p>
-          <a
-            href="mailto:mohamed.laabidi@supcom.tn"
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#1E40AF] text-[#1E40AF] hover:bg-[#1E40AF] hover:text-white rounded-full font-semibold transition-all duration-200"
-          >
-            Become a Partner
-          </a>
+          <div className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl text-white">
+            <Handshake className="w-6 h-6" />
+            <div className="text-left">
+              <p className="font-semibold">Want to become a partner?</p>
+              <p className="text-sm text-white/80">Contact us at glycocare.tn@gmail.com</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
-};
-
-const PartnerLogo = ({ partner }) => {
-  switch (partner.logo) {
-    case 'atsn':
-      return (
-        <div className="text-center">
-          <div className="text-xs text-[#1E40AF] font-semibold leading-tight">
-            الجمعية التونسية لعلوم التغذية
-          </div>
-          <div className="text-[10px] text-gray-600 mt-1">
-            Association Tunisienne des Sciences de la Nutrition
-          </div>
-        </div>
-      );
-    case 'delice':
-      return (
-        <div className="text-center">
-          <span className="text-2xl font-bold text-[#1E40AF]">délice</span>
-        </div>
-      );
-    case 'kilani':
-      return (
-        <div className="w-16 h-16 bg-[#9B8B6E] rounded-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <div className="text-xs font-bold">KILANI</div>
-            <div className="text-[8px]">GROUPE</div>
-          </div>
-        </div>
-      );
-    case 'stb':
-      return (
-        <div className="w-16 h-16 bg-[#1E40AF] rounded-lg flex items-center justify-center">
-          <span className="text-white text-xs font-bold text-center">STB<br/>Bank</span>
-        </div>
-      );
-    case 'runin':
-      return (
-        <div className="flex items-center space-x-1">
-          <PersonStanding className="w-8 h-8 text-[#EF4444]" />
-          <div>
-            <span className="text-lg font-bold text-[#1E40AF]">Run</span>
-            <span className="text-lg font-bold text-[#EF4444]">-in</span>
-          </div>
-        </div>
-      );
-    case 'innta':
-      return (
-        <div className="text-center">
-          <span className="text-lg font-bold text-[#1E40AF]">INNTA</span>
-          <div className="text-[8px] text-gray-500">Institut National de Nutrition</div>
-        </div>
-      );
-    default:
-      return <span className="text-gray-400 text-xs">{partner.name}</span>;
-  }
 };
 
 export default Partners;
