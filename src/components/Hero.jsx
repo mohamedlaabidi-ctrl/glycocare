@@ -160,7 +160,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="mt-12 grid grid-cols-3 gap-8">
+            <div className="mt-4 grid grid-cols-3 gap-8">
               {[
                 { number: '100+', label: 'Expected Runners' },
                 { number: '20+', label: 'Glucometers Goal' },
