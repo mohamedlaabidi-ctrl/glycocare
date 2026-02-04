@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Heart } from 'lucide-react';
+import { ArrowRight, Heart, Ticket } from 'lucide-react';
 import { useRamadan } from '../context/RamadanContext';
 
 const Hero = () => {
@@ -89,6 +89,23 @@ const Hero = () => {
               }
             </p>
 
+            {/* Participation Fee Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex items-center justify-center lg:justify-start gap-3 mb-8"
+            >
+              <div className={`flex items-center gap-2 px-5 py-3 rounded-full font-bold ${
+                isRamadanMode 
+                  ? 'bg-[#D4AF37] text-gray-900' 
+                  : 'bg-green-500 text-white'
+              }`}>
+                <Ticket className="w-5 h-5" />
+                <span>Participation Fee: Only 5 DT</span>
+              </div>
+            </motion.div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -145,9 +162,9 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-12 grid grid-cols-3 gap-8">
               {[
-                { number: '100+', label: 'Expected Runners' },
-                { number: '20+', label: 'Glucometers Goal' },
-                { number: '5', label: 'Partner Organizations' },
+                { number: '500+', label: 'Expected Runners' },
+                { number: '100+', label: 'Glucometers Goal' },
+                { number: '5 DT', label: 'Participation Fee' },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -216,6 +233,18 @@ const Hero = () => {
                   <div className="text-sm font-semibold text-gray-900">February 15, 2026</div>
                   <div className="text-xs text-gray-500">Save the Date!</div>
                 </div>
+              </motion.div>
+
+              {/* Floating Price Card */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8 }}
+                whileHover={{ scale: 1.05 }}
+                className="absolute -top-4 -right-4 backdrop-blur-md bg-green-500 rounded-xl shadow-xl p-4 text-white"
+              >
+                <div className="text-xs font-medium">Entry Fee</div>
+                <div className="text-2xl font-bold">5 DT</div>
               </motion.div>
             </div>
             {/* Background Decoration */}
