@@ -159,11 +159,11 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Stats - BIGGER SIZE */}
-            <div className="mt-16 grid grid-cols-3 gap-6">
+            {/* Stats */}
+            <div className="mt-12 grid grid-cols-3 gap-8">
               {[
-                { number: '500+', label: 'Expected Runners' },
-                { number: '100+', label: 'Glucometers Goal' },
+                { number: '100+', label: 'Expected Runners' },
+                { number: '20+', label: 'Glucometers Goal' },
                 { number: '5 DT', label: 'Participation Fee' },
               ].map((stat, index) => (
                 <motion.div
@@ -171,12 +171,12 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="text-center lg:text-left p-4 rounded-xl bg-white/5 backdrop-blur-sm"
+                  className="text-center lg:text-left"
                 >
-                  <div className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold ${isRamadanMode ? 'text-[#D4AF37]' : 'text-white'}`}>
+                  <div className={`text-2xl sm:text-3xl font-bold ${isRamadanMode ? 'text-[#D4AF37]' : 'text-white'}`}>
                     {stat.number}
                   </div>
-                  <div className="text-sm sm:text-base text-white/70 mt-2 font-medium">{stat.label}</div>
+                  <div className="text-sm text-white/60">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
