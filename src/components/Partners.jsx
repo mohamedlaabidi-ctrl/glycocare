@@ -124,7 +124,7 @@ const Partners = () => {
             <Handshake className="w-6 h-6" />
             <div className="text-left">
               <p className="font-semibold">Want to become a partner?</p>
-              <p className="text-sm text-white/80">Contact us at glycocare.tn@gmail.com</p>
+              <p className="text-sm text-white/80">mohamedyassine.kamoun@supcom.tn</p>
             </div>
           </div>
         </motion.div>
