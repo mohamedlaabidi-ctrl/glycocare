@@ -77,7 +77,7 @@ const RegistrationForm = () => {
                 <span className="font-semibold">Participation Fee: 5 DT</span>
               </div>
               <p className="text-sm text-yellow-700 mt-2">
-                Please pay the fee at the registration desk on the event day or by contacting one of theorganizers below.
+                Please pay the fee at the registration desk on the event day or by contacting one of the organizers below.
               </p>
             </div>
             <p className="text-sm text-gray-500">
