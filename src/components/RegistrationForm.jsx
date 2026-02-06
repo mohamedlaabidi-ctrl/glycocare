@@ -262,7 +262,7 @@ const RegistrationForm = () => {
             </motion.button>
 
             <p className="text-center text-sm text-gray-500">
-              By registering, you agree to our terms and conditions. The participation fee of <strong>5 DT</strong> will be collected on the event day.
+              By registering, you agree to our terms and conditions. The participation fee of <strong>5 DT</strong> will be collected on the event day or by contacting one of the organizers below.
             </p>
           </form>
         </motion.div>
