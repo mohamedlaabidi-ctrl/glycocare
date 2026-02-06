@@ -27,7 +27,7 @@ const RegistrationForm = () => {
     setIsLoading(true);
     setError('');
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbywhV3nYrJA2SpnfXlbmg_XULvUU1QkWf1y_-RhsqGbpRgJDA-Gd9jxyvkchAF-PAyX/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzsyANMt3kb5sVxbiOpeZ9y8QdhLzBDYtoliYnLdstEBCQtI2_YSDoyP15hZT1oCv4H/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
