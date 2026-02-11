@@ -24,7 +24,7 @@ const Events = () => {
       time: '08:30 AM',
       location: "Sup'Com Auditorium",
       description: 'Educational session on diabetes prevention and management.',
-      attendees: 200,
+      attendees: 150,
       isMain: false,
     },
     {
@@ -33,7 +33,7 @@ const Events = () => {
       time: '10:00 AM',
       location: 'Cité Technologique',
       description: 'The main marathon event begins with all participants.',
-      attendees: 500,
+      attendees: 100,
       isMain: true,
     },
 
@@ -43,7 +43,7 @@ const Events = () => {
       time: '12:00 PM',
       location: "Sup'Com Campus",
       description: 'Award ceremony and closing remarks with refreshments.',
-      attendees: 500,
+      attendees: 100,
       isMain: false,
     },
   ];
